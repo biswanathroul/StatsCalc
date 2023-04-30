@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Mean, Median, and Mode Calculator</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;700&display=swap" rel="stylesheet"><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<style>
+	body{
+    font-family: Urbanist;
+    background: #fef7e0;
+}
+.navbarbgcol{
+    background: red!important;
+}
+.brandingaimainbg {
+    background: #fff;
+    width: 100%;
+    margin: 0px 0px 0px 0px;
+    padding: 50px;
+    border-radius: 10px;
+    border: 1px solid #dadce0;
+    
+
+}
+h1.baih01 {
+    font-weight: 600;
+    text-align: center;
+    
+}
+.loginformbg {
+    background: #fff;
+    width: 400px;
+    margin: 100px 0px 0px 0px;
+    padding: 50px;
+    border-radius: 10px;
+    border: 1px solid #dadce0;
+}
+.loginformline01 {
+    margin-bottom: 20px;
+}
+.loginformtext01 {
+    font-weight: 600;
+}
+.loginformbox01 {
+    width: 100%;
+    border-color:#cc0101;
+    border-radius: 10px;
+    padding: 5px 0px 5px 10px;
+}
+
+.loginformtext02 {
+    font-size: 14px;
+    font-weight: 600;
+    text-align: justify;
+    margin: 0px 10px 10px 174px;
+}
+
+.loginformbtn01 {
+    margin: 0px 0px 0px 0px;
+    width: 100%;
+    background: #cc0101;
+    border-color: #cc0101;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.footercopyrighttext{
+    text-align: center;
+    margin: 50px;
+}
+
+.brandingaisidebg{
+    background: #fff;
+    width: 100%;
+    margin: 0px 0px 0px 0px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #dadce0;
+}
+
+.baih02{
+
+}
+.brandnamelistbtn01{
+    margin: 5px 0px 0px 0px;
+    width: 50%;
+    background: #cc0101;
+    border-color: #cc0101;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+}
+.colorbox01 {
+    background: red;
+    width: 100%;
+    height: 5vh;
+}
+
+
+
+
+
+
+
+
+
+.input {
+    padding: 10px;
+    font-size: 16px;
+}
+.button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.output {
+    margin-top: 20px;
+    font-size: 18px;
+}
+</style>
+
+
+</head>
+<body>
+<!-- menubar -->
+<section>
+	<nav class="navbar navbar-expand-lg bg-body-tertiary navbarbgcol">
+		<div class="container-fluid">
+		  <a class="navbar-brand" href="#">Statistics</a>
+		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+			<ul class="navbar-nav ">            
+			</ul>
+		  </div>
+		</div>
+	  </nav>
+</section>
+<!-- menubar end -->
+	<section>
+		<div class="container">
+            <div class="row mt-5">
+                <div class="col-lg-1 col-sm-1 col-12"></div>
+                <div class="col-lg-10 col-sm-10 col-12">
+                    <div class="brandingaimainbg">
+                        <h1 class="baih01">Mean, Median, and Mode Calculator</h2>
+
+
+
+							<label for="" class="loginformtext01">Enter a list of numbers separated by commas:</label><br>						
+							<div class="loginformline01">
+	<input type="text" class="loginformbox01" id="numbers-input"></div>
+	<button class="btn btn-secondary btn-sm loginformbtn01" onclick="calculate()">Calculate</button>
+	
+
+                            <!-- <form action="" >
+                                
+                                <label for="" class="loginformtext02">By clicking Login, you agree our User Agreement, Privacy Policy, and Cookie Policy.</label>
+                                <button type="button" class="btn btn-secondary btn-sm loginformbtn01" onclick="getAIResponse()">Generate</button>
+                            </form> -->
+                    </div>
+
+                </div>
+                <div class="col-lg-1 col-sm-1 col-12"></div>
+            </div>
+
+        </div>
+		<div class="container">
+            <div class="row mt-5">
+                <div class="col-lg-1 col-sm-1 col-12"></div>
+                <div class="col-lg-10 col-sm-10 col-12">
+                    <div class="brandingaimainbg">
+                        <h1 class="baih01">Answer </h2>
+							<div class="output">
+								<p class="loginformtext01">Mean: <span id="mean-output" ></span></p>
+								<p class="loginformtext01">Median: <span id="median-output"></span></p>
+								<p class="loginformtext01">Mode: <span id="mode-output"></span></p>
+							</div>  
+                    </div>
+
+                </div>
+                <div class="col-lg-1 col-sm-1 col-12"></div>
+            </div>
+
+        </div>
+	</section>
+
+	<footer>
+		<p class="footercopyrighttext">© Biswanath 2023 || Made with ❤️ in India</p>
+	</footer>
+	
+	<script>
+		function calculate() {
+			// Get the input value and convert it to a list of integers
+			var numbers_str = document.getElementById("numbers-input").value;
+			var numbers = numbers_str.split(',').map(Number);
+			
+			// Calculate the mean, median, and mode
+			var mean_value = numbers.reduce((a, b) => a + b) / numbers.length;
+			var sorted_numbers = numbers.slice().sort();
+			var median_value = sorted_numbers.length % 2 == 0 ?
+				(sorted_numbers[sorted_numbers.length / 2 - 1] + sorted_numbers[sorted_numbers.length / 2]) / 2 :
+				sorted_numbers[(sorted_numbers.length - 1) / 2];
+			var mode_value = sorted_numbers.reduce((a, b, i, arr) => {
+				var count = arr.filter(num => num == b).length;
+				if (count > a.count) {
+					return { value: b, count: count };
+				} else {
+					return a;
+				}
+			}, { value: null, count: 0 }).value;
+			
+			// Display the results
+			document.getElementById("mean-output").innerHTML = mean_value.toFixed(2);
+			document.getElementById("median-output").innerHTML = median_value.toFixed(2);
+			document.getElementById("mode-output").innerHTML = mode_value;
+		}
+	</script>
+</body>
+</html>
